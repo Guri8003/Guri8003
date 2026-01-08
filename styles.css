@@ -18,10 +18,10 @@
   --color-text-white: #FFFFFF;
 
   /* Accent Colors */
-  --color-accent: #C399FF;
-  --color-accent-hover: #B380FF;
+  --color-accent: #c399ff;
+  --color-accent-hover: #2563EB;
   --color-accent-cyan: #06B6D4;
-  --color-accent-blue: #3B82F6;
+  --color-accent-purple: #8B5CF6;
   --color-success: #22C55E;
   --color-warning: #F59E0B;
   --color-error: #EF4444;
