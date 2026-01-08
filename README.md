@@ -55,7 +55,6 @@ This site is deployed using GitHub Pages.
 ## Contact
 
 - **Email**: guri.70pro@gmail.com
-- **Phone**: +91 83606-48003
 - **LinkedIn**: [gurpreet-singh0525](https://www.linkedin.com/in/gurpreet-singh0525)
 - **GitHub**: [Guri8003](https://github.com/Guri8003)
 - **Location**: Mohali, Punjab, India
