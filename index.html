@@ -32,12 +32,17 @@
 
 <body>
 
+    <!-- Flutter Code Background -->
+    <canvas id="flutter-canvas"></canvas>
+
     <!-- Page Loader -->
     <div class="page-loader" id="pageLoader">
         <div class="loader-content">
-            <div class="loader-logo">&lt; Gurpreet /&gt;</div>
-            <img src="loader.gif" alt="Loading..." class="loader-gif">
-            <p class="loader-text">Loading Portfolio...</p>
+            <div class="loader-name-animation">
+                <span>G</span><span>u</span><span>r</span><span>p</span><span>r</span><span>e</span><span>e</span><span>t</span>
+                <span class="space">&nbsp;</span>
+                <span>S</span><span>i</span><span>n</span><span>g</span><span>h</span>
+            </div>
         </div>
     </div>
 
@@ -113,7 +118,7 @@
                 </div>
                 <div class="hero-image">
                     <div class="image-wrapper">
-                        <img src="ad.png" alt="Gurpreet Singh - Flutter Developer" class="profile-img">
+                        <img src="ad.png" alt="Gurpreet Singh - Flutter Developer">
                     </div>
                 </div>
             </div>
@@ -591,6 +596,157 @@
         document.querySelectorAll('.service-card, .project-card, .stat-item, .timeline-item').forEach(el => {
             observer.observe(el);
         });
+
+        // Flutter Code Background (Enhanced)
+        const canvas = document.getElementById('flutter-canvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+
+            let width, height;
+            let mouseX = -1000, mouseY = -1000;
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+                initParticles();
+            }
+            window.addEventListener('resize', resize);
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            // Keywords & Symbols
+            const symbols = [
+                'Flutter', 'Widget', 'build', 'setState', 'async', 'await',
+                'Scaffold', 'Material', 'BoxDecoration', 'Column', 'Row',
+                '{}', '=>', '</>', '[]', '?', '!', 'void', 'final', 'const'
+            ];
+
+            const darkColors = [
+                'rgba(66, 165, 245, 0.4)',  // Blue
+                'rgba(2, 86, 155, 0.3)',    // Dark Blue
+                'rgba(255, 255, 255, 0.2)', // White
+            ];
+
+            const lightColors = [
+                'rgba(2, 86, 155, 0.5)',    // Dark Blue (High Contrast)
+                'rgba(0, 0, 0, 0.4)',       // Grey/Black
+                'rgba(139, 92, 246, 0.4)'   // Purple Accent
+            ];
+
+            let isDarkTheme = document.documentElement.getAttribute('data-theme') !== 'light';
+
+            // Watch for theme changes
+            const themeObserver = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.attributeName === 'data-theme') {
+                        isDarkTheme = document.documentElement.getAttribute('data-theme') !== 'light';
+                        updateParticleColors();
+                    }
+                });
+            });
+
+            themeObserver.observe(document.documentElement, { attributes: true });
+
+            function getThemeColors() {
+                return isDarkTheme ? darkColors : lightColors;
+            }
+
+            class FlutterParticle {
+                constructor() {
+                    this.init(true);
+                }
+
+                init(initial = false) {
+                    this.x = Math.random() * width;
+                    this.y = initial ? Math.random() * height : height + 20;
+                    this.size = Math.random() * 14 + 10;
+                    this.speedY = Math.random() * -1 - 0.5;
+                    this.speedX = (Math.random() - 0.5) * 0.5;
+                    this.text = symbols[Math.floor(Math.random() * symbols.length)];
+                    this.updateThemeColor(); // Set initial color based on theme
+                    this.rotation = (Math.random() - 0.5) * 0.2;
+                    this.rotationSpeed = (Math.random() - 0.5) * 0.01;
+                    this.isHovered = false;
+                }
+
+                updateThemeColor() {
+                    const currentColors = getThemeColors();
+                    this.baseColor = currentColors[Math.floor(Math.random() * currentColors.length)];
+                    this.color = this.baseColor;
+                }
+
+                update() {
+                    this.y += this.speedY;
+                    this.x += this.speedX;
+                    this.rotation += this.rotationSpeed;
+
+                    // Mouse Interaction
+                    const dx = mouseX - this.x;
+                    const dy = mouseY - this.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    const interactRadius = 150;
+
+                    if (dist < interactRadius) {
+                        const force = (interactRadius - dist) / interactRadius;
+                        this.x -= dx * 0.05 * force;
+                        this.y -= dy * 0.05 * force;
+                        this.rotation += 0.1 * force;
+
+                        // Highlight Color (Adapt to theme)
+                        this.color = isDarkTheme ? 'rgba(255, 255, 255, 0.9)' : 'rgba(2, 86, 155, 0.9)';
+                        this.isHovered = true;
+                    } else {
+                        if (this.isHovered) {
+                            this.color = this.baseColor;
+                            this.isHovered = false;
+                        }
+                    }
+
+                    if (this.y < -50) this.init();
+                }
+
+                draw() {
+                    ctx.save();
+                    ctx.translate(this.x, this.y);
+                    ctx.rotate(this.rotation);
+                    ctx.font = `bold ${this.size}px 'Fira Code', monospace`;
+                    ctx.fillStyle = this.color;
+                    ctx.textAlign = 'center';
+                    ctx.fillText(this.text, 0, 0);
+                    ctx.restore();
+                }
+            }
+
+            let particles = [];
+            const particleCount = 45;
+
+            function initParticles() {
+                particles = [];
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new FlutterParticle());
+                }
+            }
+
+            function updateParticleColors() {
+                particles.forEach(p => p.updateThemeColor());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+                requestAnimationFrame(animate);
+            }
+
+            // Boot
+            resize();
+            animate();
+        }
     </script>
 
 </body>
