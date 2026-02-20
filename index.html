@@ -23,7 +23,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
         rel="stylesheet">
 
     <!-- Stylesheet -->
@@ -31,17 +32,32 @@
 </head>
 
 <body>
+    <!-- Premium Ambient Background Layers -->
+    <div class="bg-effects">
+        <div class="bg-gradient"></div>
+        <div class="bg-blob blob-1"></div>
+        <div class="bg-blob blob-2"></div>
+    </div>
+
+    <!-- Magnetic Mouse Spotlight Overlay -->
+    <div class="mouse-spotlight" id="mouseSpotlight"></div>
 
     <!-- Flutter Code Background -->
     <canvas id="flutter-canvas"></canvas>
 
-    <!-- Page Loader -->
+    <!-- Terminal Page Loader -->
     <div class="page-loader" id="pageLoader">
-        <div class="loader-content">
-            <div class="loader-name-animation">
-                <span>G</span><span>u</span><span>r</span><span>p</span><span>r</span><span>e</span><span>e</span><span>t</span>
-                <span class="space">&nbsp;</span>
-                <span>S</span><span>i</span><span>n</span><span>g</span><span>h</span>
+        <div class="terminal-loader">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="close-btn"></span>
+                    <span class="minimize-btn"></span>
+                    <span class="maximize-btn"></span>
+                </div>
+                <div class="terminal-title">bash -- ~</div>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+                <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">npm run dev</span></div>
             </div>
         </div>
     </div>
@@ -49,7 +65,7 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="#home" class="nav-logo">&lt; Gurpreet /&gt;</a>
+            <!-- <a href="#home" class="nav-logo">&lt; Gurpreet /&gt;</a> -->
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -90,9 +106,13 @@
                         <span class="first-name">Gurpreet</span>
                         <span class="last-name">Singh</span>
                     </h1>
-                    <p class="hero-role">
-                        <span class="role-icon">▸</span> Flutter Developer
+                    <p class="hero-role" aria-label="Role typing effect">
+                        <span class="role-icon">▸</span> <span id="typewriter"></span><span class="cursor">&nbsp;</span>
                     </p>
+                    <!-- <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Hire Me</a>
+                        <a href="#projects" class="btn btn-outline">View Projects</a>
+                    </div> -->
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/gurpreet-singh0525" target="_blank"
                             rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
@@ -125,6 +145,28 @@
         </div>
     </section>
 
+    <!-- Stats Section -->
+    <section class="section stats" id="stats">
+        <div class="container stats-container">
+            <div class="stat-box">
+                <h3 class="stat-number" data-target="6">0</h3><span>+</span>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="stat-number" data-target="40">0</h3><span>+</span>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="stat-number" data-target="30">0</h3><span>+</span>
+                <p>Live Apps</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="stat-number" data-target="100">0</h3><span>K+</span>
+                <p>Users Impacted</p>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section class="section about" id="about">
         <div class="container">
@@ -146,16 +188,6 @@
                         intuitive UI/UX design to deliver high-performance cross-platform solutions.
                     </p>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <h3>6+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>20+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -164,114 +196,160 @@
     <section class="section experience" id="experience">
         <div class="container">
             <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
+            <div class="experience-grid">
 
                 <!-- Experience 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-date">Aug 2024 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Senior Flutter Developer</h3>
-                        <h4>Harav Technologies LLP</h4>
-                        <p class="location">📍 Sahibzada Ajit Singh Nagar, Punjab</p>
-                        <ul class="experience-list">
-                            <li>Spearheading the development of a suite of AI-driven mobile applications, integrating
-                                advanced Large Language Models (LLMs) and generative APIs.</li>
-                            <li>Architecting complex features for dynamic content creation, including automatic
-                                presentation generation (PPT Maker) and website layouts.</li>
-                            <li>Optimizing app performance for real-time AI interactions in ChatBots and Voice Note
-                                processing.</li>
-                        </ul>
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <h3 class="exp-role">Senior Flutter Developer</h3>
+                        <div class="exp-date">Aug 2024 - Present</div>
                     </div>
+                    <div class="exp-company">
+                        <h4>Harav Technologies LLP</h4>
+                        <span class="location">📍 Sahibzada Ajit Singh Nagar, Punjab</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Spearheading the development of a suite of AI-driven mobile applications, integrating
+                            advanced Large Language Models (LLMs) and generative APIs.</li>
+                        <li>Architecting complex features for dynamic content creation, including automatic
+                            presentation generation (PPT Maker) and website layouts.</li>
+                        <li>Optimizing app performance for real-time AI interactions in ChatBots and Voice Note
+                            processing.</li>
+                    </ul>
                 </div>
 
                 <!-- Experience 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-date">Jun 2022 - Jun 2024</div>
-                    <div class="timeline-content">
-                        <h3>Android & Flutter Developer</h3>
-                        <h4>Spiderweb-Tech Pvt. Ltd.</h4>
-                        <p class="location">📍 Remote</p>
-                        <ul class="experience-list">
-                            <li>Developed and maintained mobile applications using Flutter and Android native
-                                technologies.</li>
-                            <li>Integrated third-party libraries and APIs to enhance application functionality.</li>
-                            <li>Collaborated with cross-functional teams to deliver scalable and robust solutions.</li>
-                        </ul>
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <h3 class="exp-role">Android & Flutter Developer</h3>
+                        <div class="exp-date">Jun 2022 - Jun 2024</div>
                     </div>
+                    <div class="exp-company">
+                        <h4>Spiderweb-Tech Pvt. Ltd.</h4>
+                        <span class="location">📍 Remote</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Developed and maintained mobile applications using Flutter and Android native
+                            technologies.</li>
+                        <li>Integrated third-party libraries and APIs to enhance application functionality.</li>
+                        <li>Collaborated with cross-functional teams to deliver scalable and robust solutions.</li>
+                    </ul>
                 </div>
 
                 <!-- Experience 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-date">Dec 2018 - Feb 2021</div>
-                    <div class="timeline-content">
-                        <h3>Android Application Developer</h3>
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <h3 class="exp-role">Android Application Developer</h3>
+                        <div class="exp-date">Dec 2018 - Feb 2021</div>
+                    </div>
+                    <div class="exp-company">
                         <h4>bCoder Castle Pvt. Ltd.</h4>
-                        <p class="location">📍 Sahibzada Ajit Singh Nagar, Punjab</p>
-                        <ul class="experience-list">
-                            <li>Worked on the full lifecycle of Android application development including design,
-                                testing, and deployment.</li>
-                            <li>Implemented Firebase features including Crashlytics, Realtime Database, and Push
-                                Notifications.</li>
-                            <li>Managed social authentication integrations (Facebook, Google).</li>
-                        </ul>
+                        <span class="location">📍 Sahibzada Ajit Singh Nagar, Punjab</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Worked on the full lifecycle of Android application development including design,
+                            testing, and deployment.</li>
+                        <li>Implemented Firebase features including Crashlytics, Realtime Database, and Push
+                            Notifications.</li>
+                        <li>Managed social authentication integrations (Facebook, Google).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section (Tech Stack + Services) -->
+    <section class="section expertise" id="services">
+        <div class="container">
+            <div class="expertise-wrapper">
+
+                <!-- Tech Stack Window -->
+                <div class="expertise-tech">
+                    <div class="subsection-header">
+                        <div class="bracket-icon">&lt;/&gt;</div>
+                        <h3 class="subsection-title">Tech Stack</h3>
+                    </div>
+                    <div class="tech-grid" id="techGrid">
+                        <!-- Tech items -->
+                        <div class="tech-item" data-tooltip="Flutter - 6+ Years">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                                alt="Flutter">
+                            <span class="tech-name">Flutter</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="Dart - 6+ Years">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+                                alt="Dart">
+                            <span class="tech-name">Dart</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="Kotlin - 3+ Years">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+                                alt="Kotlin">
+                            <span class="tech-name">Kotlin</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="Java - 4+ Years">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                alt="Java">
+                            <span class="tech-name">Java</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="Firebase - Expert">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                                alt="Firebase">
+                            <span class="tech-name">Firebase</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="Git / VCS">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                alt="Git">
+                            <span class="tech-name">Git</span>
+                        </div>
+                        <div class="tech-item" data-tooltip="LLMs & Gen AI">
+                            <div class="tech-icon-emoji">🤖</div>
+                            <span class="tech-name">Gen AI</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section class="section skills" id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>Languages</h3>
-                    <p>Dart, Java, Kotlin, XML</p>
+                <!-- What I Do Window -->
+                <div class="expertise-services">
+                    <div class="subsection-header">
+                        <div class="bracket-icon">⚡</div>
+                        <h3 class="subsection-title">What I Do</h3>
+                    </div>
+                    <div class="services-list">
+                        <div class="expertise-service-card">
+                            <div class="service-icon">📱</div>
+                            <div class="service-content">
+                                <h4>Mobile Development</h4>
+                                <p>Building high-performance cross-platform mobile applications using Flutter and native
+                                    Android technologies.</p>
+                            </div>
+                        </div>
+                        <div class="expertise-service-card">
+                            <div class="service-icon">🤖</div>
+                            <div class="service-content">
+                                <h4>AI Integration</h4>
+                                <p>Integrating Large Language Models and generative AI to create intelligent,
+                                    context-aware applications.</p>
+                            </div>
+                        </div>
+                        <div class="expertise-service-card">
+                            <div class="service-icon">💬</div>
+                            <div class="service-content">
+                                <h4>ChatBot Development</h4>
+                                <p>Creating sophisticated conversational AI with custom system prompts and persona
+                                    management.</p>
+                            </div>
+                        </div>
+                        <div class="expertise-service-card">
+                            <div class="service-icon">🎨</div>
+                            <div class="service-content">
+                                <h4>UI/UX Design</h4>
+                                <p>Designing intuitive and beautiful user interfaces that enhance user experience and
+                                    engagement.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🛠️</div>
-                    <h3>Frameworks</h3>
-                    <p>Flutter, Android SDK</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Tools & APIs</h3>
-                    <p>Firebase (Crashlytics, Realtime DB), Google Maps API, Postman, Git (GitHub/GitLab/Bitbucket)</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Services Section -->
-    <section class="section services" id="services">
-        <div class="container">
-            <h2 class="section-title">What I Do</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>Mobile Development</h3>
-                    <p>Building high-performance cross-platform mobile applications using Flutter and native Android
-                        technologies.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🤖</div>
-                    <h3>AI Integration</h3>
-                    <p>Integrating Large Language Models and generative AI to create intelligent, context-aware
-                        applications.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💬</div>
-                    <h3>ChatBot Development</h3>
-                    <p>Creating sophisticated conversational AI with custom system prompts and persona management.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>UI/UX Design</h3>
-                    <p>Designing intuitive and beautiful user interfaces that enhance user experience and engagement.
-                    </p>
-                </div>
             </div>
         </div>
     </section>
@@ -281,6 +359,30 @@
         <div class="container">
             <h2 class="section-title">Published Flutter Apps</h2>
             <div class="projects-grid">
+
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f9/cd/58/f9cd5871-eda7-55a5-85be-4a6a5ca7e790/Placeholder.mill/200x200bb-75.webp"
+                            alt="Sous-AI Recipe Keeper" class="app-icon">
+                        <div class="project-overlay">
+                            <span class="project-tag">Food & Recipe</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Sous-AI Recipe Keeper</h3>
+                        <p>SousChef is your AI cooking companion that organizes your recipes, understands your pantry,
+                            and helps you confidently turn ingredients into meals without the stress.</p>
+                        <div class="project-tech">
+                            <span>AI Cooking</span>
+                            <span>Smart Meal Planning</span>
+                            <span>Recipe Organizer</span>
+                        </div>
+                        <a href="https://apps.apple.com/jm/app/sous-ai-recipe-keeper/id6758428731" target="_blank"
+                            rel="noopener noreferrer" class="project-link">View on App Store →</a>
+                    </div>
+                </div>
+
 
                 <div class="project-card">
                     <div class="project-image">
@@ -500,20 +602,82 @@
 
     <!-- JavaScript -->
     <script>
-        // Page Loader
+        // Advanced Terminal Boot Sequence Loader
         window.addEventListener('load', () => {
             const loader = document.getElementById('pageLoader');
+            const terminalBody = document.getElementById('terminalBody');
 
-            // Hide loader after 2.5 seconds
+            const bootSequence = [
+                { text: 'Initializing system modules...', delay: 300 },
+                { text: 'Loading AI Core...', delay: 600 },
+                { text: 'Connecting to Flutter Dev Environment...', delay: 400 },
+                { text: 'Compiling assets...', delay: 500 },
+                { text: 'Hi, I’m Gurpreet 👋', delay: 300, color: 'var(--color-success)' }
+            ];
+
+            let cumulativeDelay = 1000;
+
+            bootSequence.forEach((step, index) => {
+                setTimeout(() => {
+                    const line = document.createElement('div');
+                    line.className = 'terminal-line';
+                    if (step.color) {
+                        line.innerHTML = `<span style="color: ${step.color};">${step.text}</span>`;
+                    } else {
+                        line.innerHTML = `<span>[OK]</span> ${step.text}`;
+                    }
+                    terminalBody.appendChild(line);
+                }, cumulativeDelay);
+                cumulativeDelay += step.delay;
+            });
+
+            // Hide loader after sequence completes
             setTimeout(() => {
                 loader.classList.add('fade-out');
-
-                // Remove loader from DOM after fade animation completes
                 setTimeout(() => {
                     loader.style.display = 'none';
+                    startTypewriter(); // Start typing effect only after loader clears
                 }, 500);
-            }, 2500);
+            }, cumulativeDelay + 800);
         });
+
+        // Typewriter Effect for Hero Section
+        const roles = [
+            "Flutter Developer",
+            "Cross Platform Specialist",
+            "Clean Architecture Enthusiast",
+            "Firebase Expert"
+        ];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typewriterElement = document.getElementById('typewriter');
+
+        function startTypewriter() {
+            if (!typewriterElement) return;
+            const currentRole = roles[roleIndex];
+
+            if (isDeleting) {
+                typewriterElement.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                typeSpeed = 2000; // Pause at end of word
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                typeSpeed = 500; // Pause before next word
+            }
+
+            setTimeout(startTypewriter, typeSpeed);
+        }
 
         // Mobile menu toggle
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
@@ -565,6 +729,31 @@
             }
         });
 
+        // Active Nav Link Observer
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('header, section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= (sectionTop - 200)) { // 200px offset for early triggering 
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Trigger once on load to set initial active state
+        window.dispatchEvent(new Event('scroll'));
+
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -579,22 +768,85 @@
             });
         });
 
-        // Intersection Observer for animations
+        // Intersection Observer for Animation & Stats
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const standardObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate-in');
+                    standardObserver.unobserve(entry.target); // Only animate once
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.service-card, .project-card, .stat-item, .timeline-item').forEach(el => {
-            observer.observe(el);
+        document.querySelectorAll('.expertise-wrapper, .service-card, .project-card, .experience-card').forEach(el => {
+            standardObserver.observe(el);
+        });
+
+        // Animated Counters logic
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    statObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-number').forEach(stat => {
+            statObserver.observe(stat);
+        });
+
+        function animateCounter(element) {
+            const target = +element.getAttribute('data-target');
+            const duration = 2000; // 2 seconds
+            const step = Math.ceil(target / (duration / 16)); // 60fps
+            let current = 0;
+
+            const updateCounter = () => {
+                current += step;
+                if (current < target) {
+                    element.innerText = current;
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.innerText = target;
+                }
+            };
+            updateCounter();
+        }
+
+        // Vanilla JS 3D Tilt Effect for Project Cards
+        const projectCards = document.querySelectorAll('.project-card');
+
+        projectCards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+
+                // Adjust multiplier to increase/decrease tilt
+                const rotateX = -(y / rect.height) * 20;
+                const rotateY = (x / rect.width) * 20;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                card.style.zIndex = '10';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)`;
+                card.style.zIndex = '1';
+                // Reset smoothly
+                card.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease, z-index 0.5s ease';
+            });
+
+            card.addEventListener('mouseenter', () => {
+                // Remove transition during movement for immediate response
+                card.style.transition = 'none';
+            });
         });
 
         // Flutter Code Background (Enhanced)
@@ -746,6 +998,32 @@
             // Boot
             resize();
             animate();
+        }
+
+        // --- Mouse Spotlight Tracker ---
+        const mouseSpotlight = document.getElementById('mouseSpotlight');
+        if (mouseSpotlight) {
+            document.body.addEventListener('mousemove', e => {
+                const { clientX, clientY } = e;
+                mouseSpotlight.style.setProperty('--mouse-x', `${clientX}px`);
+                mouseSpotlight.style.setProperty('--mouse-y', `${clientY}px`);
+
+                // Add magnetic hover to buttons if close
+                document.querySelectorAll('.btn').forEach(btn => {
+                    const rect = btn.getBoundingClientRect();
+                    const centerX = rect.left + rect.width / 2;
+                    const centerY = rect.top + rect.height / 2;
+                    const distance = Math.sqrt(Math.pow(clientX - centerX, 2) + Math.pow(clientY - centerY, 2));
+
+                    if (distance < 100) {
+                        const pullX = (clientX - centerX) * 0.2;
+                        const pullY = (clientY - centerY) * 0.2;
+                        btn.style.transform = `translate(${pullX}px, ${pullY}px) scale(1.05)`;
+                    } else {
+                        btn.style.transform = 'translate(0px, 0px) scale(1)';
+                    }
+                });
+            });
         }
     </script>
 
