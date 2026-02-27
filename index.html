@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Gurpreet Singh - Senior Flutter Developer specializing in Generative AI mobile applications. Expert in integrating LLMs and building dynamic AI-powered tools.">
+        content="Gurpreet Singh - Senior Mobile Architect & Generative AI Specialist with 6+ years building scalable Flutter and Android applications. Expert in Clean Architecture, MVVM, Bloc, Riverpod, and LLM integration.">
     <meta name="keywords"
-        content="Flutter Developer, Generative AI, Mobile Development, LLM Integration, ChatBots, AI Applications">
+        content="Flutter Developer, Android Developer, Generative AI, Mobile Architecture, Clean Architecture, MVVM, Bloc, Riverpod, LLM Integration, Kotlin, Dart">
     <meta name="author" content="Gurpreet Singh">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Gurpreet Singh - Senior Flutter Developer">
+    <meta property="og:title" content="Gurpreet Singh - Senior Mobile Architect & Generative AI Specialist">
     <meta property="og:description"
-        content="Innovative Senior Flutter Developer with 6+ years of experience in Generative AI mobile applications">
+        content="Senior Mobile Architect & Generative AI Specialist with 6+ years building high-performance Flutter and Android applications using Clean Architecture and GenAI integration.">
     <meta property="og:image" content="profile.png">
     <meta property="og:type" content="website">
     <link rel="icon" href="favicon.ico">
 
-    <title>Gurpreet Singh - Senior Flutter Developer</title>
+    <title>Gurpreet Singh - Senior Mobile Architect & Generative AI Specialist</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,35 +64,82 @@
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <!-- <a href="#home" class="nav-logo">&lt; Gurpreet /&gt;</a> -->
+        <div class="nav-container-inner">
+
+            <!-- Logo -->
+            <a href="#home" class="nav-logo" id="navLogo">
+                <span class="logo-bracket">&lt;</span><span class="logo-name">Gurpreet</span><span
+                    class="logo-bracket">/&gt;</span>
+            </a>
+
+            <!-- Desktop Links -->
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="resume.pdf" download="Gurpreet_Singh_Resume.pdf" class="nav-link resume-btn">Resume</a>
+                <li><a href="#home" class="nav-link active" data-nav="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-nav="about">About</a></li>
+                <li><a href="#experience" class="nav-link" data-nav="experience">Experience</a></li>
+                <li><a href="#services" class="nav-link" data-nav="services">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-nav="projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+            </ul>
+
+            <!-- Right Controls -->
+            <div class="nav-right">
+                <a href="resume.pdf" download="Gurpreet_Singh_Resume.pdf" class="nav-resume-btn" id="navResumeBtn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Resume
+                </a>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <!-- Moon icon (shown in dark mode = switch TO light) -->
+                    <svg class="toggle-icon toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+                    <!-- Sun icon (shown in light mode = switch TO dark) -->
+                    <svg class="toggle-icon toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06L6.166 5.106a.75.75 0 0 0-1.06 1.06l1.59 1.591Z" />
+                    </svg>
+                    <span class="toggle-ripple"></span>
+                </button>
+
+                <!-- Hamburger (mobile) -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false">
+                    <span class="ham-line"></span>
+                    <span class="ham-line"></span>
+                    <span class="ham-line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div class="mobile-drawer" id="mobileDrawer">
+            <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-nav-link" data-nav="home">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link" data-nav="about">About</a></li>
+                <li><a href="#experience" class="mobile-nav-link" data-nav="experience">Experience</a></li>
+                <li><a href="#services" class="mobile-nav-link" data-nav="services">Skills</a></li>
+                <li><a href="#projects" class="mobile-nav-link" data-nav="projects">Projects</a></li>
+                <li><a href="#contact" class="mobile-nav-link" data-nav="contact">Contact</a></li>
+                <li>
+                    <a href="resume.pdf" download="Gurpreet_Singh_Resume.pdf" class="mobile-resume-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Download Resume
+                    </a>
                 </li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <svg class="theme-icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
-                </svg>
-                <div class="theme-toggle-slider"></div>
-                <svg class="theme-icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                    <path fill-rule="evenodd"
-                        d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
-                        clip-rule="evenodd" />
-                </svg>
-            </button>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
     </nav>
 
@@ -174,18 +221,23 @@
             <div class="about-grid">
                 <div class="about-text">
                     <p>
-                        Innovative Senior Flutter Developer with <strong>6+ years of experience</strong>, specializing
-                        in the development of
-                        next-generation Generative AI mobile applications.
+                        Senior Mobile Architect & Generative AI Specialist with <strong>6+ years (2,190+ days)</strong>
+                        of experience engineering high-impact mobile solutions using <strong>Flutter (Dart)</strong> and
+                        <strong>Android (Kotlin/Java)</strong>.
                     </p>
                     <p>
-                        Expert in integrating Large Language Models (LLMs) and complex AI algorithms to build dynamic
-                        tools
-                        like ChatBots, PPT Makers, and Voice Analysis systems.
+                        Expert in <strong>Clean Architecture</strong> and <strong>MVVM</strong> patterns with deep
+                        mastery of state management solutions — <strong>Bloc, Riverpod,</strong> and
+                        <strong>Provider</strong> — ensuring scalable, testable, and maintainable codebases.
                     </p>
                     <p>
-                        Strong technical foundation in Dart, Kotlin, and Java, combining scalable architecture with
-                        intuitive UI/UX design to deliver high-performance cross-platform solutions.
+                        Specialist in integrating <strong>Generative AI</strong> and Large Language Models (LLMs) to
+                        build intelligent, context-aware applications — from ChatBots and Voice Analysis to AI-generated
+                        PPTs and dynamic content systems.
+                    </p>
+                    <p>
+                        Committed to performance optimization and delivering production-ready applications that create
+                        real user impact at scale.
                     </p>
                 </div>
             </div>
@@ -258,306 +310,421 @@
         </div>
     </section>
 
-    <!-- Expertise Section (Tech Stack + Services) -->
+    <!-- Expertise Section (Tech Stack + What I Do) -->
     <section class="section expertise" id="services">
         <div class="container">
-            <div class="expertise-wrapper">
 
-                <!-- Tech Stack Window -->
-                <div class="expertise-tech">
-                    <div class="subsection-header">
-                        <div class="bracket-icon">&lt;/&gt;</div>
-                        <h3 class="subsection-title">Tech Stack</h3>
-                    </div>
-                    <div class="tech-grid" id="techGrid">
-                        <!-- Tech items -->
-                        <div class="tech-item" data-tooltip="Flutter - 6+ Years">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
-                                alt="Flutter">
-                            <span class="tech-name">Flutter</span>
-                        </div>
-                        <div class="tech-item" data-tooltip="Dart - 6+ Years">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
-                                alt="Dart">
-                            <span class="tech-name">Dart</span>
-                        </div>
-                        <div class="tech-item" data-tooltip="Kotlin - 3+ Years">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
-                                alt="Kotlin">
-                            <span class="tech-name">Kotlin</span>
-                        </div>
-                        <div class="tech-item" data-tooltip="Java - 4+ Years">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                                alt="Java">
-                            <span class="tech-name">Java</span>
-                        </div>
-                        <div class="tech-item" data-tooltip="Firebase - Expert">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-                                alt="Firebase">
-                            <span class="tech-name">Firebase</span>
-                        </div>
-                        <div class="tech-item" data-tooltip="Git / VCS">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                                alt="Git">
-                            <span class="tech-name">Git</span>
-                        </div>
-                        <div class="tech-item" data-tooltip="LLMs & Gen AI">
-                            <div class="tech-icon-emoji">🤖</div>
-                            <span class="tech-name">Gen AI</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- What I Do Window -->
-                <div class="expertise-services">
-                    <div class="subsection-header">
-                        <div class="bracket-icon">⚡</div>
-                        <h3 class="subsection-title">What I Do</h3>
-                    </div>
-                    <div class="services-list">
-                        <div class="expertise-service-card">
-                            <div class="service-icon">📱</div>
-                            <div class="service-content">
-                                <h4>Mobile Development</h4>
-                                <p>Building high-performance cross-platform mobile applications using Flutter and native
-                                    Android technologies.</p>
-                            </div>
-                        </div>
-                        <div class="expertise-service-card">
-                            <div class="service-icon">🤖</div>
-                            <div class="service-content">
-                                <h4>AI Integration</h4>
-                                <p>Integrating Large Language Models and generative AI to create intelligent,
-                                    context-aware applications.</p>
-                            </div>
-                        </div>
-                        <div class="expertise-service-card">
-                            <div class="service-icon">💬</div>
-                            <div class="service-content">
-                                <h4>ChatBot Development</h4>
-                                <p>Creating sophisticated conversational AI with custom system prompts and persona
-                                    management.</p>
-                            </div>
-                        </div>
-                        <div class="expertise-service-card">
-                            <div class="service-icon">🎨</div>
-                            <div class="service-content">
-                                <h4>UI/UX Design</h4>
-                                <p>Designing intuitive and beautiful user interfaces that enhance user experience and
-                                    engagement.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <!-- Section Header -->
+            <div class="expertise-header-new">
+                <h2 class="section-title">Skills &amp; Services</h2>
+                <p class="expertise-subtitle">From cross-platform Flutter to GenAI &mdash; a full-stack mobile
+                    engineering toolkit.</p>
             </div>
+
+            <!-- ===== TECH STACK ===== -->
+            <div class="tech-stack-section">
+                <div class="ts-label">
+                    <span class="ts-tag">&lt;/&gt;</span>
+                    <span>Tech Stack</span>
+                </div>
+
+                <!-- Icon pill row -->
+                <div class="ts-pill-row" id="tsPillRow">
+                    <div class="ts-pill" data-level="95" data-years="6+ yrs">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+                            alt="Flutter" class="ts-pill-icon">
+                        <span>Flutter</span>
+                        <span class="ts-pill-years">6+ yrs</span>
+                    </div>
+                    <div class="ts-pill" data-level="95" data-years="6+ yrs">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart"
+                            class="ts-pill-icon">
+                        <span>Dart</span>
+                        <span class="ts-pill-years">6+ yrs</span>
+                    </div>
+                    <div class="ts-pill" data-level="80" data-years="3+ yrs">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+                            alt="Kotlin" class="ts-pill-icon">
+                        <span>Kotlin</span>
+                        <span class="ts-pill-years">3+ yrs</span>
+                    </div>
+                    <div class="ts-pill" data-level="82" data-years="4+ yrs">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
+                            class="ts-pill-icon">
+                        <span>Java</span>
+                        <span class="ts-pill-years">4+ yrs</span>
+                    </div>
+                    <div class="ts-pill" data-level="90" data-years="Expert">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                            alt="Firebase" class="ts-pill-icon">
+                        <span>Firebase</span>
+                        <span class="ts-pill-years">Expert</span>
+                    </div>
+                    <div class="ts-pill" data-level="92" data-years="Expert">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
+                            class="ts-pill-icon">
+                        <span>Git</span>
+                        <span class="ts-pill-years">Expert</span>
+                    </div>
+                    <div class="ts-pill ts-pill-emoji" data-level="88" data-years="Specialist">
+                        <span class="ts-emoji">&#129302;</span>
+                        <span>Gen AI</span>
+                        <span class="ts-pill-years">Specialist</span>
+                    </div>
+                    <div class="ts-pill ts-pill-emoji" data-level="90" data-years="Advanced">
+                        <span class="ts-emoji">&#129138;</span>
+                        <span>Bloc</span>
+                        <span class="ts-pill-years">Advanced</span>
+                    </div>
+                    <div class="ts-pill ts-pill-emoji" data-level="85" data-years="Advanced">
+                        <span class="ts-emoji">&#9875;</span>
+                        <span>Riverpod</span>
+                        <span class="ts-pill-years">Advanced</span>
+                    </div>
+                    <div class="ts-pill ts-pill-emoji" data-level="93" data-years="Expert">
+                        <span class="ts-emoji">&#127959;</span>
+                        <span>Clean Arch</span>
+                        <span class="ts-pill-years">Expert</span>
+                    </div>
+                </div>
+
+                <!-- Skill bars -->
+                <div class="ts-bars" id="tsBars">
+                    <div class="ts-bar-row" data-bar="95">
+                        <span class="ts-bar-label">Flutter &amp; Dart</span>
+                        <div class="ts-bar-track">
+                            <div class="ts-bar-fill" style="width:0%"></div>
+                        </div>
+                        <span class="ts-bar-pct">95%</span>
+                    </div>
+                    <div class="ts-bar-row" data-bar="82">
+                        <span class="ts-bar-label">Android (Kotlin / Java)</span>
+                        <div class="ts-bar-track">
+                            <div class="ts-bar-fill" style="width:0%"></div>
+                        </div>
+                        <span class="ts-bar-pct">82%</span>
+                    </div>
+                    <div class="ts-bar-row" data-bar="88">
+                        <span class="ts-bar-label">GenAI &amp; LLM Integration</span>
+                        <div class="ts-bar-track">
+                            <div class="ts-bar-fill" style="width:0%"></div>
+                        </div>
+                        <span class="ts-bar-pct">88%</span>
+                    </div>
+                    <div class="ts-bar-row" data-bar="92">
+                        <span class="ts-bar-label">State Management (Bloc / Riverpod / Provider)</span>
+                        <div class="ts-bar-track">
+                            <div class="ts-bar-fill" style="width:0%"></div>
+                        </div>
+                        <span class="ts-bar-pct">92%</span>
+                    </div>
+                    <div class="ts-bar-row" data-bar="90">
+                        <span class="ts-bar-label">Firebase &amp; Cloud Services</span>
+                        <div class="ts-bar-track">
+                            <div class="ts-bar-fill" style="width:0%"></div>
+                        </div>
+                        <span class="ts-bar-pct">90%</span>
+                    </div>
+                    <div class="ts-bar-row" data-bar="93">
+                        <span class="ts-bar-label">Clean Architecture / MVVM</span>
+                        <div class="ts-bar-track">
+                            <div class="ts-bar-fill" style="width:0%"></div>
+                        </div>
+                        <span class="ts-bar-pct">93%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== WHAT I DO ===== -->
+            <div class="wid-section">
+                <div class="ts-label">
+                    <span class="ts-tag">&#9889;</span>
+                    <span>What I Do</span>
+                </div>
+                <div class="wid-grid">
+
+                    <div class="wid-card">
+                        <div class="wid-icon-wrap wid-purple">&#128241;</div>
+                        <h4 class="wid-title">Mobile Development</h4>
+                        <p class="wid-desc">Building high-performance cross-platform mobile apps using Flutter &amp;
+                            native Android &mdash; from architecture to App Store shipping.</p>
+                        <div class="wid-tags"><span>Flutter</span><span>Android</span><span>iOS</span></div>
+                    </div>
+
+                    <div class="wid-card">
+                        <div class="wid-icon-wrap wid-cyan">&#129302;</div>
+                        <h4 class="wid-title">GenAI Integration</h4>
+                        <p class="wid-desc">Embedding LLMs, vision models and generative APIs into mobile apps &mdash;
+                            ChatBots, voice analysis, PPT generation and more.</p>
+                        <div class="wid-tags"><span>LLMs</span><span>OpenAI</span><span>Gemini</span></div>
+                    </div>
+
+                    <div class="wid-card">
+                        <div class="wid-icon-wrap wid-green">&#127959;</div>
+                        <h4 class="wid-title">Scalable Architecture</h4>
+                        <p class="wid-desc">Designing Clean Architecture and MVVM codebases with Bloc / Riverpod &mdash;
+                            testable, maintainable, and team-ready.</p>
+                        <div class="wid-tags"><span>Clean Arch</span><span>MVVM</span><span>Bloc</span></div>
+                    </div>
+
+                    <div class="wid-card">
+                        <div class="wid-icon-wrap wid-orange">&#9889;</div>
+                        <h4 class="wid-title">Performance Optimization</h4>
+                        <p class="wid-desc">Profiling and tuning Flutter apps for 60/120fps rendering &mdash; reduced
+                            widget rebuilds, lazy loading and efficient memory usage.</p>
+                        <div class="wid-tags"><span>DevTools</span><span>60fps</span><span>Profiling</span></div>
+                    </div>
+
+                    <div class="wid-card">
+                        <div class="wid-icon-wrap wid-pink">&#128172;</div>
+                        <h4 class="wid-title">Conversational AI</h4>
+                        <p class="wid-desc">Building sophisticated chatbots with custom personas, multi-turn memory and
+                            context-aware responses for mobile-first users.</p>
+                        <div class="wid-tags"><span>ChatBot</span><span>Persona</span><span>RAG</span></div>
+                    </div>
+
+                    <div class="wid-card">
+                        <div class="wid-icon-wrap wid-blue">&#127912;</div>
+                        <h4 class="wid-title">UI/UX Engineering</h4>
+                        <p class="wid-desc">Translating Figma designs into pixel-perfect animated Flutter UIs with
+                            custom painters, Lottie animations and haptic feedback.</p>
+                        <div class="wid-tags"><span>Figma</span><span>Animations</span><span>Lottie</span></div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </section>
-
     <!-- Projects Section -->
     <section class="section projects" id="projects">
         <div class="container">
             <h2 class="section-title">Published Flutter Apps</h2>
-            <div class="projects-grid">
+            <p class="projects-subtitle">9 live apps across health, productivity, education &amp; more — shipped and
+                scaling.</p>
 
+            <!-- Filter Tabs -->
+            <div class="project-filters" id="projectFilters">
+                <button class="filter-btn active" data-filter="all">All Apps</button>
+                <button class="filter-btn" data-filter="productivity">Productivity</button>
+                <button class="filter-btn" data-filter="health">Health &amp; Fitness</button>
+                <button class="filter-btn" data-filter="education">Education</button>
+                <button class="filter-btn" data-filter="utilities">Utilities</button>
+            </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f9/cd/58/f9cd5871-eda7-55a5-85be-4a6a5ca7e790/Placeholder.mill/200x200bb-75.webp"
-                            alt="Sous-AI Recipe Keeper" class="app-icon">
-                        <div class="project-overlay">
-                            <span class="project-tag">Food & Recipe</span>
+            <!-- Featured Card -->
+            <div class="project-featured" id="featuredCard" data-category="education">
+                <div class="featured-banner">
+                    <div class="featured-banner-glow"></div>
+                    <div class="featured-label">&#11088; Featured App</div>
+                    <div class="featured-content">
+                        <div class="featured-left">
+                            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2f/8d/fb/2f8dfbbc-d5ae-6536-d10b-aa4533efa789/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/200x200ia-75.webp"
+                                alt="AI Photo Math Solver" class="featured-icon">
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Sous-AI Recipe Keeper</h3>
-                        <p>SousChef is your AI cooking companion that organizes your recipes, understands your pantry,
-                            and helps you confidently turn ingredients into meals without the stress.</p>
-                        <div class="project-tech">
-                            <span>AI Cooking</span>
-                            <span>Smart Meal Planning</span>
-                            <span>Recipe Organizer</span>
+                        <div class="featured-right">
+                            <span class="featured-category-badge">&#128208; Education</span>
+                            <h3 class="featured-title">AI Photo Math Solver &ndash; Mathguru</h3>
+                            <p class="featured-desc">Snap a photo of any math problem and get instant step-by-step AI
+                                explanations. Supports algebra, calculus, geometry and more. Built with Flutter for a
+                                blazing-fast cross-platform experience.</p>
+                            <div class="featured-tags">
+                                <span>Flutter</span><span>OCR</span><span>AI Math</span><span>LLM</span>
+                            </div>
+                            <a href="https://apps.apple.com/us/app/ai-photo-math-solver-mathguru/id6596742896"
+                                target="_blank" rel="noopener noreferrer" class="app-store-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                    <path
+                                        d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                                </svg>
+                                View on App Store
+                            </a>
                         </div>
-                        <a href="https://apps.apple.com/jm/app/sous-ai-recipe-keeper/id6758428731" target="_blank"
-                            rel="noopener noreferrer" class="project-link">View on App Store →</a>
                     </div>
                 </div>
+            </div>
 
+            <!-- App Showcase Grid -->
+            <div class="projects-showcase" id="projectsShowcase">
 
-                <div class="project-card">
-                    <div class="project-image">
+                <div class="app-card" data-category="health">
+                    <div class="app-card-header">
                         <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f1/c0/f8/f1c0f842-d5df-7a72-0bf0-ceeac35871ac/Placeholder.mill/200x200bb-75.webp"
-                            alt="Calorie Calculator by Calo AI" class="app-icon">
-                        <div class="project-overlay">
-                            <span class="project-tag">Health & Fitness</span>
+                            alt="Calorie Calculator" class="app-card-icon">
+                        <div class="app-card-meta">
+                            <span class="app-badge health">Health &amp; Fitness</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Calorie Calculator by Calo AI</h3>
-                        <p>AI food tracker with photo/barcode scanning. 14M+ food library with macro tracking.
-                            Personalized goals and progress charts.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>AI Recognition</span>
-                            <span>Health Tracking</span>
-                        </div>
-                        <a href="https://apps.apple.com/us/app/calorie-calculator-by-calo-ai/id6745021774"
-                            target="_blank" rel="noopener noreferrer" class="project-link">View on App Store →</a>
-                    </div>
+                    <h3 class="app-card-title">Calorie Calculator by Calo AI</h3>
+                    <p class="app-card-desc">AI food tracker with photo/barcode scanning. 14M+ food library with macro
+                        tracking and personalized goals.</p>
+                    <div class="app-card-tags"><span>AI Recognition</span><span>Health
+                            Tracking</span><span>Flutter</span></div>
+                    <a href="https://apps.apple.com/us/app/calorie-calculator-by-calo-ai/id6745021774" target="_blank"
+                        rel="noopener noreferrer" class="app-card-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        App Store
+                    </a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2f/8d/fb/2f8dfbbc-d5ae-6536-d10b-aa4533efa789/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/200x200ia-75.webp"
-                            alt="AI Photo Math Solver - Mathguru" class="app-icon">
-                        <div class="project-overlay">
-                            <span class="project-tag">Education</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>AI Photo Math Solver - Mathguru</h3>
-                        <p>Snap photo of math problems for instant solutions. Step-by-step AI explanations. Supports
-                            algebra, calculus and more.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>OCR</span>
-                            <span>AI Math</span>
-                        </div>
-                        <a href="https://apps.apple.com/us/app/ai-photo-math-solver-mathguru/id6596742896"
-                            target="_blank" rel="noopener noreferrer" class="project-link">View on App Store →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
+                <div class="app-card" data-category="productivity">
+                    <div class="app-card-header">
                         <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/de/44/38/de4438eb-33ed-867d-72f1-397684d65ea0/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/200x200ia-75.webp"
-                            alt="Gamma App - Presentation Maker" class="app-icon">
-                        <div class="project-overlay">
-                            <span class="project-tag">Productivity</span>
+                            alt="Gamma App" class="app-card-icon">
+                        <div class="app-card-meta">
+                            <span class="app-badge productivity">Productivity</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Gamma App - Presentation Maker</h3>
-                        <p>AI presentation maker from simple prompts. Auto-generates slides with visuals. Supports
-                            graphics and multi-language translation.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>LLMs</span>
-                            <span>Auto-Design</span>
-                        </div>
-                        <a href="https://apps.apple.com/us/app/gamma-app-presentation-maker/id6746396819"
-                            target="_blank" rel="noopener noreferrer" class="project-link">View on App Store →</a>
-                    </div>
+                    <h3 class="app-card-title">Gamma App &ndash; Presentation Maker</h3>
+                    <p class="app-card-desc">AI presentation maker from simple prompts. Auto-generates slides with
+                        visuals, graphics and multi-language translation.</p>
+                    <div class="app-card-tags"><span>LLMs</span><span>Auto-Design</span><span>Flutter</span></div>
+                    <a href="https://apps.apple.com/us/app/gamma-app-presentation-maker/id6746396819" target="_blank"
+                        rel="noopener noreferrer" class="app-card-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        App Store
+                    </a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
+                <div class="app-card" data-category="productivity">
+                    <div class="app-card-header">
                         <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bc/e8/c5/bce8c515-235a-e9f5-9379-226acea4e304/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/200x200ia-75.webp"
-                            alt="Beautiful AI Slides by GammaAI" class="app-icon">
-                        <div class="project-overlay">
-                            <span class="project-tag">Productivity</span>
+                            alt="Beautiful AI Slides" class="app-card-icon">
+                        <div class="app-card-meta">
+                            <span class="app-badge productivity">Productivity</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Beautiful AI Slides by GammaAI</h3>
-                        <p>Prompt-based AI deck creator for professionals. Auto-layouts, charts and brand kits. Perfect
-                            for sales pitches and reports.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>AI Design</span>
-                            <span>Templates</span>
-                        </div>
-                        <a href="https://apps.apple.com/us/app/beautiful-ai-slides-by-gammaai/id6744013170"
-                            target="_blank" rel="noopener noreferrer" class="project-link">View on App Store →</a>
-                    </div>
+                    <h3 class="app-card-title">Beautiful AI Slides by GammaAI</h3>
+                    <p class="app-card-desc">Prompt-based AI deck creator for professionals. Auto-layouts, charts and
+                        brand kits for sales pitches and reports.</p>
+                    <div class="app-card-tags"><span>AI Design</span><span>Templates</span><span>Flutter</span></div>
+                    <a href="https://apps.apple.com/us/app/beautiful-ai-slides-by-gammaai/id6744013170" target="_blank"
+                        rel="noopener noreferrer" class="app-card-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        App Store
+                    </a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
+                <div class="app-card" data-category="utilities">
+                    <div class="app-card-header">
                         <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/aa/e9/39/aae9393b-94a5-112f-84f8-e25032da15dd/Placeholder.mill/200x200bb-75.webp"
-                            alt="Plant Finder: Plant AI Care" class="app-icon">
-                        <div class="project-overlay">
-                            <span class="project-tag">Utilities</span>
+                            alt="Plant Finder" class="app-card-icon">
+                        <div class="app-card-meta">
+                            <span class="app-badge utilities">Utilities</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Plant Finder: Plant AI Care</h3>
-                        <p>AI-powered plant identification via photo snaps. Provides instant care tips and species info.
-                            Track your personal plant collection.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>AI Vision</span>
-                            <span>Plant Care</span>
-                        </div>
-                        <a href="https://apps.apple.com/us/app/plant-finder-plant-ai-care/id6744879727" target="_blank"
-                            rel="noopener noreferrer" class="project-link">View on App Store →</a>
-                    </div>
+                    <h3 class="app-card-title">Plant Finder: Plant AI Care</h3>
+                    <p class="app-card-desc">AI-powered plant identification via photo snaps. Provides instant care
+                        tips, species info, and personal plant collection tracking.</p>
+                    <div class="app-card-tags"><span>AI Vision</span><span>Plant Care</span><span>Flutter</span></div>
+                    <a href="https://apps.apple.com/us/app/plant-finder-plant-ai-care/id6744879727" target="_blank"
+                        rel="noopener noreferrer" class="app-card-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        App Store
+                    </a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
+                <div class="app-card" data-category="productivity">
+                    <div class="app-card-header">
                         <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b9/62/42/b96242b6-1908-b587-f2be-201f24e5e826/AppIconThemed-0-0-1x_U007ephone-0-1-0-85-220.jpeg/200x200ia-75.webp"
-                            alt="AI Note Taker - Noteguru AI" class="app-icon">
-                        <div class="project-overlay">
-                            <span class="project-tag">Productivity</span>
+                            alt="Noteguru AI" class="app-card-icon">
+                        <div class="app-card-meta">
+                            <span class="app-badge productivity">Productivity</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>AI Note Taker - Noteguru AI</h3>
-                        <p>AI-powered audio transcription and notes. Real-time meeting summaries. Organize and search
-                            notes instantly.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Speech-to-Text</span>
-                            <span>AI Summary</span>
-                        </div>
-                        <a href="https://apps.apple.com/us/app/ai-note-taker-noteguru-ai/id6740402869" target="_blank"
-                            rel="noopener noreferrer" class="project-link">View on App Store →</a>
+                    <h3 class="app-card-title">AI Note Taker &ndash; Noteguru AI</h3>
+                    <p class="app-card-desc">AI-powered audio transcription and real-time meeting summaries. Organize
+                        and search notes instantly.</p>
+                    <div class="app-card-tags"><span>Speech-to-Text</span><span>AI Summary</span><span>Flutter</span>
                     </div>
+                    <a href="https://apps.apple.com/us/app/ai-note-taker-noteguru-ai/id6740402869" target="_blank"
+                        rel="noopener noreferrer" class="app-card-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        App Store
+                    </a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
+                <div class="app-card" data-category="utilities">
+                    <div class="app-card-header">
                         <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/09/c7/f3/09c7f368-efa8-2a80-0199-be600c409ce3/Placeholder.mill/200x200bb-75.webp"
-                            alt="Holy Bible Chat App - Heaven" class="app-icon">
-                        <div class="project-overlay">
-                            <span class="project-tag">Reference</span>
+                            alt="Holy Bible Chat App" class="app-card-icon">
+                        <div class="app-card-meta">
+                            <span class="app-badge utilities">Reference</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Holy Bible Chat App - Heaven</h3>
-                        <p>AI Bible chat for study and prayer. Multiple translations with offline access. Instant
-                            scripture search and exploration.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>AI Chat</span>
-                            <span>Offline DB</span>
-                        </div>
-                        <a href="https://apps.apple.com/us/app/holy-bible-chat-app-heaven/id6751233039" target="_blank"
-                            rel="noopener noreferrer" class="project-link">View on App Store →</a>
-                    </div>
+                    <h3 class="app-card-title">Holy Bible Chat App &ndash; Heaven</h3>
+                    <p class="app-card-desc">AI Bible chat for study and prayer. Multiple translations with offline
+                        access and instant scripture search.</p>
+                    <div class="app-card-tags"><span>AI Chat</span><span>Offline DB</span><span>Flutter</span></div>
+                    <a href="https://apps.apple.com/us/app/holy-bible-chat-app-heaven/id6751233039" target="_blank"
+                        rel="noopener noreferrer" class="app-card-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        App Store
+                    </a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
+                <div class="app-card" data-category="productivity">
+                    <div class="app-card-header">
                         <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/32/4c/72/324c72aa-696f-d65b-3580-ee3122caf9bc/Placeholder.mill/200x200bb-75.webp"
-                            alt="Vibecode: Websites Lovable AI" class="app-icon">
-                        <div class="project-overlay">
-                            <span class="project-tag">Productivity</span>
+                            alt="Vibecode" class="app-card-icon">
+                        <div class="app-card-meta">
+                            <span class="app-badge productivity">Productivity</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Vibecode: Websites Lovable AI</h3>
-                        <p>AI website builder for instant web creation. Drag-drop interface with smart templates.
-                            Perfect for small businesses and portfolios.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Web Builder</span>
-                            <span>AI Templates</span>
-                        </div>
-                        <a href="https://apps.apple.com/us/app/vibecode-websites-lovable-ai/id6749351042"
-                            target="_blank" rel="noopener noreferrer" class="project-link">View on App Store →</a>
+                    <h3 class="app-card-title">Vibecode: Websites Lovable AI</h3>
+                    <p class="app-card-desc">AI website builder for instant web creation. Drag-drop interface with smart
+                        templates for small businesses and portfolios.</p>
+                    <div class="app-card-tags"><span>Web Builder</span><span>AI Templates</span><span>Flutter</span>
                     </div>
+                    <a href="https://apps.apple.com/us/app/vibecode-websites-lovable-ai/id6749351042" target="_blank"
+                        rel="noopener noreferrer" class="app-card-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        App Store
+                    </a>
+                </div>
+
+                <div class="app-card" data-category="health">
+                    <div class="app-card-header">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f9/cd/58/f9cd5871-eda7-55a5-85be-4a6a5ca7e790/Placeholder.mill/200x200bb-75.webp"
+                            alt="Sous-AI Recipe Keeper" class="app-card-icon">
+                        <div class="app-card-meta">
+                            <span class="app-badge health">Food &amp; Recipe</span>
+                        </div>
+                    </div>
+                    <h3 class="app-card-title">Sous-AI Recipe Keeper</h3>
+                    <p class="app-card-desc">Your AI cooking companion that organizes recipes, understands your pantry,
+                        and helps you turn ingredients into meals.</p>
+                    <div class="app-card-tags"><span>AI Cooking</span><span>Meal Planning</span><span>Flutter</span>
+                    </div>
+                    <a href="https://apps.apple.com/jm/app/sous-ai-recipe-keeper/id6758428731" target="_blank"
+                        rel="noopener noreferrer" class="app-card-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        App Store
+                    </a>
                 </div>
 
             </div>
@@ -608,11 +775,13 @@
             const terminalBody = document.getElementById('terminalBody');
 
             const bootSequence = [
-                { text: 'Initializing system modules...', delay: 300 },
-                { text: 'Loading AI Core...', delay: 600 },
-                { text: 'Connecting to Flutter Dev Environment...', delay: 400 },
-                { text: 'Compiling assets...', delay: 500 },
-                { text: 'Hi, I’m Gurpreet 👋', delay: 300, color: 'var(--color-success)' }
+                { text: 'Initializing Gurpreet_Singh_v6.2.0...', delay: 300 },
+                { text: 'Status: Senior Mobile Architect & Generative AI Specialist', delay: 500 },
+                { text: 'Experience_Uptime: 2,190+ Days [6+ Years]', delay: 400 },
+                { text: 'Primary_Kernel: Flutter (Dart) & Android (Kotlin/Java)', delay: 400 },
+                { text: 'Architecture: Clean Architecture / MVVM', delay: 350 },
+                { text: 'State_Management: [Bloc, Riverpod, Provider]', delay: 350 },
+                { text: 'Deployment_Status: Ready for high-impact production environments. 🚀', delay: 300, color: 'var(--color-success)' }
             ];
 
             let cumulativeDelay = 1000;
@@ -643,10 +812,11 @@
 
         // Typewriter Effect for Hero Section
         const roles = [
-            "Flutter Developer",
-            "Cross Platform Specialist",
-            "Clean Architecture Enthusiast",
-            "Firebase Expert"
+            "Senior Mobile Architect",
+            "Generative AI Specialist",
+            "Flutter & Android Expert",
+            "Clean Architecture | MVVM",
+            "Bloc · Riverpod · Provider"
         ];
         let roleIndex = 0;
         let charIndex = 0;
@@ -679,22 +849,26 @@
             setTimeout(startTypewriter, typeSpeed);
         }
 
-        // Mobile menu toggle
+        // Mobile menu toggle (new drawer)
         const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navMenu = document.getElementById('navMenu');
+        const mobileDrawer = document.getElementById('mobileDrawer');
 
-        mobileMenuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileMenuToggle.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
+        if (mobileMenuToggle && mobileDrawer) {
+            mobileMenuToggle.addEventListener('click', () => {
+                const isOpen = mobileDrawer.classList.toggle('open');
+                mobileMenuToggle.classList.toggle('active', isOpen);
+                mobileMenuToggle.setAttribute('aria-expanded', isOpen);
             });
-        });
+
+            // Close drawer on mobile link click
+            document.querySelectorAll('.mobile-nav-link, .mobile-resume-btn').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileDrawer.classList.remove('open');
+                    mobileMenuToggle.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
 
         // Theme Toggle
         const themeToggle = document.getElementById('themeToggle');
@@ -729,27 +903,31 @@
             }
         });
 
-        // Active Nav Link Observer
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('header, section');
+        // Active Nav Link Observer (syncs desktop + mobile)
+        const sections = document.querySelectorAll('header, section[id]');
 
-        window.addEventListener('scroll', () => {
+        function updateActiveLinks() {
             let current = '';
-
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (window.scrollY >= (sectionTop - 200)) { // 200px offset for early triggering 
+                if (window.scrollY >= (sectionTop - 160)) {
                     current = section.getAttribute('id');
                 }
             });
 
-            navLinks.forEach(link => {
+            // Desktop
+            document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
+                if (link.getAttribute('href') === '#' + current) link.classList.add('active');
             });
-        });
+            // Mobile
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveLinks, { passive: true });
 
         // Trigger once on load to set initial active state
         window.dispatchEvent(new Event('scroll'));
@@ -1000,7 +1178,82 @@
             animate();
         }
 
+        // --- Skill Bars Animation ---
+        const barObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.ts-bar-row').forEach(row => {
+                        const pct = row.getAttribute('data-bar');
+                        row.querySelector('.ts-bar-fill').style.width = pct + '%';
+                    });
+                    barObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const barsEl = document.getElementById('tsBars');
+        if (barsEl) barObserver.observe(barsEl);
+
+        // --- What I Do card animations ---
+        const widObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('animate-in'), i * 80);
+                    widObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.wid-card').forEach(el => widObserver.observe(el));
+
+        // --- Project Filter Tabs ---
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const appCards = document.querySelectorAll('.app-card');
+        const featuredCard = document.getElementById('featuredCard');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+
+                // Show/hide featured card
+                if (featuredCard) {
+                    const featCat = featuredCard.getAttribute('data-category');
+                    if (filter === 'all' || filter === featCat) {
+                        featuredCard.classList.remove('hidden');
+                    } else {
+                        featuredCard.classList.add('hidden');
+                    }
+                }
+
+                // Show/hide app cards
+                appCards.forEach(card => {
+                    const cat = card.getAttribute('data-category');
+                    if (filter === 'all' || filter === cat) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Observe .app-card for animate-in
+        const appCardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    appCardObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.app-card').forEach(el => appCardObserver.observe(el));
+
         // --- Mouse Spotlight Tracker ---
+
         const mouseSpotlight = document.getElementById('mouseSpotlight');
         if (mouseSpotlight) {
             document.body.addEventListener('mousemove', e => {
