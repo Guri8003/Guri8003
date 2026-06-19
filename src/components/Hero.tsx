@@ -156,7 +156,7 @@ export default function Hero() {
                 <ArrowDownRight size={18} />
               </a>
               <a
-                href="/resume.pdf"
+                href="./resume.pdf"
                 download="Gurpreet_Singh_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -267,7 +267,7 @@ export default function Hero() {
               className="hero-avatar-frame"
             >
               <img
-                src="/avatar.png"
+                src="./avatar.png"
                 alt="Gurpreet Singh"
                 style={{
                   width: '100%',
